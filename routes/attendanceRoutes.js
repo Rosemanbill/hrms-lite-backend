@@ -7,7 +7,9 @@ import {
 const router = express.Router();
 
 router.post("/", markAttendance);
-router.get("/:employeeId", getAttendanceByEmployee);
 router.get("/present-count/:employeeId", getPresentCountByEmployee);
+router.get("/:employeeId", getAttendanceByEmployee);
+
+
 
 export default router;
