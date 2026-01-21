@@ -31,3 +31,14 @@ export const getAttendanceByEmployee = async (req, res) => {
 
   res.json(records);
 };
+export const getPresentCountByEmployee = async (req, res) => {
+  const employeeId = req.params.employeeId;
+
+  const count = await Attendance.countDocuments({
+    employee: employeeId,
+    status: "Present",
+  });
+
+  res.json({ presentDays: count });
+};
+

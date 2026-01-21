@@ -8,5 +8,6 @@ const router = express.Router();
 
 router.post("/", markAttendance);
 router.get("/:employeeId", getAttendanceByEmployee);
+router.get("/present-count/:employeeId", getPresentCountByEmployee);
 
 export default router;
