@@ -16,7 +16,7 @@ This project was developed as part of a full-stack technical assessment to demon
 
 ---
 
-## ✨ Features
+## Features
 
 ### Employee Management
 - Add new employees with unique Employee ID
