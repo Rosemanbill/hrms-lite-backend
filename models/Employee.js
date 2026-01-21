@@ -1,0 +1,31 @@
+import mongoose from "mongoose";
+
+const employeeSchema = new mongoose.Schema(
+  {
+    employeeId: {
+      type: String,
+      required: true,
+      unique: true,
+      trim: true,
+    },
+    fullName: {
+      type: String,
+      required: true,
+      trim: true,
+    },
+    email: {
+      type: String,
+      required: true,
+      unique: true,
+      lowercase: true,
+      match: [/^\S+@\S+\.\S+$/, "Invalid email format"],
+    },
+    department: {
+      type: String,
+      required: true,
+    },
+  },
+  { timestamps: true }
+);
+
+export default mongoose.model("Employee", employeeSchema);
