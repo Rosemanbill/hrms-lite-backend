@@ -2,6 +2,7 @@ import express from "express";
 import {
   markAttendance,
   getAttendanceByEmployee,
+  getPresentCountByEmployee
 } from "../controllers/attendanceController.js";
 
 const router = express.Router();
